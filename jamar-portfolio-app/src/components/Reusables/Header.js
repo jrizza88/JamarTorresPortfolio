@@ -17,10 +17,13 @@ const HeaderContainer = styled.div`
 
 const Header = props => (
   <HeaderContainer>
-    <div>Home</div>
+    <NavLink to="/">
+      <div>Home</div>
+    </NavLink>
     <div>About me</div>
     <div>Projects</div>
     <div>Resume</div>
+    <div>Posts</div>
   </HeaderContainer>
 );
 
