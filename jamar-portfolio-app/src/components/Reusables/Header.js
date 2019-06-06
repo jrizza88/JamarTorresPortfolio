@@ -6,7 +6,6 @@ const HeaderContainer = styled.div`
   display: flex;
   position: fixed;
   flex-direction: column;
-  margin-top: 2.5%;
   justify-content: flex-start;
   align-items: flex-start;
   align-self: flex-start;
@@ -15,15 +14,30 @@ const HeaderContainer = styled.div`
   height: 100vh;
 `;
 
+const NavContainer = styled.div`
+display: flex;
+margin-top: 20%;
+flex-direction: column;
+align-items: flex-start;
+`
+
+const NavDivs = styled.div`
+display: flex;
+padding: 10% 0 10% 1%;
+font-size: 2rem;
+`
+
 const Header = props => (
   <HeaderContainer>
-    <NavLink to="/">
-      <div>Home</div>
-    </NavLink>
-    <div>About me</div>
-    <div>Projects</div>
-    <div>Resume</div>
-    <div>Posts</div>
+   <NavContainer>
+      <NavLink to="/">
+        <NavDivs>Home</NavDivs>
+      </NavLink>
+        <NavDivs>About</NavDivs>
+        <NavDivs>Projects</NavDivs>
+        <NavDivs>Resume</NavDivs>
+        <NavDivs>Posts</NavDivs>
+    </NavContainer>
   </HeaderContainer>
 );
 
