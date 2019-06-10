@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 
 const HeaderContainer = styled.div`
   display: flex;
-  position: fixed;
+  position: absolute;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -17,24 +17,41 @@ const HeaderContainer = styled.div`
   border-right: 1px solid black;
   width: 15%;
   height: 100vh;
+  text-decoration: none;
 `;
 
 const NavContainer = styled.div`
-display: flex;
-margin-top: 20%;
-flex-direction: column;
-align-items: flex-start;
-`
+  display: flex;
+  margin-top: 20%;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
+`;
 
 const NavDivs = styled.div`
-display: flex;
-padding: 10% 0 10% 1%;
-font-size: 2rem;
-`
+  display: flex;
+  padding: 10% 0 10% 1%;
+  font-size: 2rem;
+  text-decoration: none;
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
+`;
 
 const Header = props => (
   <HeaderContainer>
-   <NavContainer>
+    <NavContainer>
       <NavLink to="/" component={Home}>
         <NavDivs>Home</NavDivs>
       </NavLink>
@@ -53,6 +70,5 @@ const Header = props => (
     </NavContainer>
   </HeaderContainer>
 );
-
 
 export default Header;
