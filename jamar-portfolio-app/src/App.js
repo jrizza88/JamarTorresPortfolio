@@ -2,6 +2,11 @@ import React from "react";
 import styled from 'styled-components';
 import { Route, withRouter, NavLink } from "react-router-dom";
 import Header from "./components/Reusables/Header";
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
+import Resume from "./components/Resume/Resume";
+import Posts from "./components/Posts/Posts";
 import Footer from "./components/Reusables/Footer";
 import "./App.css";
 
@@ -10,8 +15,13 @@ const App = () => {
       <Container>
         <Header />
           <BodyContainer>
-          <Headline>Jamar Torres <br />Web Developer</Headline>
-          <Footer />
+            <Headline>Jamar Torres <br />Web Developer</Headline>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/About" component={About} />
+            <Route exact path="/Projects" component={Projects} />
+            <Route exact path="/Resume" component={Resume} />
+            <Route exact path="/Posts" component={Posts} />
+            <Footer />
         </BodyContainer>
       </Container>
   );
@@ -36,7 +46,7 @@ width: 90%;
 const Headline = styled.div`
 display: flex;
 position: relative;
-font-size: 3.5rem;
+font-size: 2.3rem;
 justify-content: flex-start;
 width: 100%;
 border: solid green 1px;

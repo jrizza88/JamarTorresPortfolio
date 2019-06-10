@@ -1,6 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { Route, NavLink } from "react-router-dom";
+import Home from "../Home/Home";
+import About from "../About/About";
+import Projects from "../Projects/Projects";
+import Resume from "../Resume/Resume";
+import Posts from "../Posts/Posts";
+import { NavLink } from "react-router-dom";
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -30,26 +35,24 @@ font-size: 2rem;
 const Header = props => (
   <HeaderContainer>
    <NavContainer>
-      <NavLink to="/">
+      <NavLink to="/" component={Home}>
         <NavDivs>Home</NavDivs>
       </NavLink>
+      <NavLink to="/About" component={About}>
         <NavDivs>About</NavDivs>
+      </NavLink>
+      <NavLink to="/Projects" component={Projects}>
         <NavDivs>Projects</NavDivs>
+      </NavLink>
+      <NavLink to="/Resume" component={Resume}>
         <NavDivs>Resume</NavDivs>
+      </NavLink>
+      <NavLink to="/Posts" component={Posts}>
         <NavDivs>Posts</NavDivs>
+      </NavLink>
     </NavContainer>
   </HeaderContainer>
 );
 
-// class Header extends React.Component {
-//   constructor (props) {
-//     super (props)
-//   }
-//   render () {
-//     <div>
-//       Header
-//     </div>
-//   }
-// }
 
 export default Header;
