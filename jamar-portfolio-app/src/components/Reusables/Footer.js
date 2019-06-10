@@ -1,7 +1,11 @@
 import React from "react";
 import styled from 'styled-components';
 
-const Footer = props => <FooterContainer>Footer</FooterContainer>;
+const Footer = props => (
+<FooterContainer>
+    <CopyRight>©2019 Jamar Esai Torres</CopyRight>
+</FooterContainer>
+)
 
 const FooterContainer = styled.footer`
     display: flex;
@@ -14,6 +18,12 @@ const FooterContainer = styled.footer`
     bottom:0;
     right:0;
     border: 2px solid purple;
+`
+
+const CopyRight = styled.p`
+    float: left;
+    font-size: .7rem;
+    margin-top: 0;
 `
 
 export default Footer;
