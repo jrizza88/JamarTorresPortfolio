@@ -49,7 +49,8 @@ const BodyContainer = styled.section`
 const Headline = styled.div`
   display: flex;
   position: relative;
-  padding-left: 0.5%;
+  /* padding-left: 0.5%; */
+  padding: 1% 0 1% 0.5%;
   font-size: 2.3rem;
   justify-content: space-between;
   width: 100%;
