@@ -15,7 +15,7 @@ const App = () => {
       <Container>
         <Header />
           <BodyContainer>
-            <Headline>Jamar Torres <br />Web Developer</Headline>
+            <Headline> Jamar Torres </Headline>
             <Route exact path="/" component={Home} />
             <Route exact path="/About" component={About} />
             <Route exact path="/Projects" component={Projects} />
@@ -46,6 +46,7 @@ width: 90%;
 const Headline = styled.div`
 display: flex;
 position: relative;
+padding-left: .5%;
 font-size: 2.3rem;
 justify-content: flex-start;
 width: 100%;
