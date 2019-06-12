@@ -11,10 +11,10 @@ const FooterContainer = styled.footer`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 90%;
+  width: 100%;
   position: absolute;
   padding-bottom: 5%;
-  left: 15%;
+  left: 0;
   bottom: 0;
   right: 0;
   border: 2px solid purple;

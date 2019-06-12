@@ -15,17 +15,22 @@ const HeaderContainer = styled.div`
   align-items: flex-start;
   align-self: flex-start;
   border-right: 1px solid black;
-  width: 15%;
+  width: 100%;
   height: 100vh;
   text-decoration: none;
+  border-radius: 5px;
+  background-color: black;
+  opacity: 0.8;
+  color: white;
 `;
 
 const NavContainer = styled.div`
   display: flex;
-  margin-top: 20%;
+  margin-top: 10%;
   flex-direction: column;
   align-items: flex-start;
   text-decoration: none;
+  margin-left: 5%;
   &:focus,
   &:hover,
   &:visited,
@@ -49,26 +54,37 @@ const NavDivs = styled.div`
   }
 `;
 
-const Header = props => (
-  <HeaderContainer>
-    <NavContainer>
-      <NavLink to="/" component={Home}>
-        <NavDivs>Home</NavDivs>
-      </NavLink>
-      <NavLink to="/About" component={About}>
-        <NavDivs>About</NavDivs>
-      </NavLink>
-      <NavLink to="/Projects" component={Projects}>
-        <NavDivs>Projects</NavDivs>
-      </NavLink>
-      <NavLink to="/Resume" component={Resume}>
-        <NavDivs>Resume</NavDivs>
-      </NavLink>
-      <NavLink to="/Posts" component={Posts}>
-        <NavDivs>Posts</NavDivs>
-      </NavLink>
-    </NavContainer>
-  </HeaderContainer>
-);
+class Header extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      // modal: false
+    };
+  }
+
+  render() {
+    return (
+      <HeaderContainer>
+        <NavContainer>
+          <NavLink to="/" component={Home}>
+            <NavDivs>Home</NavDivs>
+          </NavLink>
+          <NavLink to="/About" component={About}>
+            <NavDivs>About</NavDivs>
+          </NavLink>
+          <NavLink to="/Projects" component={Projects}>
+            <NavDivs>Projects</NavDivs>
+          </NavLink>
+          <NavLink to="/Resume" component={Resume}>
+            <NavDivs>Resume</NavDivs>
+          </NavLink>
+          <NavLink to="/Posts" component={Posts}>
+            <NavDivs>Posts</NavDivs>
+          </NavLink>
+        </NavContainer>
+      </HeaderContainer>
+    );
+  }
+}
 
 export default Header;
