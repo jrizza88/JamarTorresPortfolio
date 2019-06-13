@@ -27,10 +27,12 @@ class App extends React.Component {
     });
   };
 
-  closeModal = () => {
-    this.setState({
-      modal: false
-    });
+  closeModal = e => {
+    if (e.target.id !== "modal") {
+      this.setState({
+        modal: false
+      });
+    }
   };
 
   handleCloseModal = e => {

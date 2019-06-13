@@ -35,6 +35,7 @@ const About = () => (
 
 const AboutContainer = styled.section`
   display: flex;
+  position: relative;
   flex-direction: column;
 `;
 
