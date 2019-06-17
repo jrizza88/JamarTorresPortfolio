@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 class Home extends React.Component {
   // state = {
@@ -17,7 +18,7 @@ class Home extends React.Component {
             My name is Jamar, and I like to create and contribute to the world
             of web development.
           </p>
-          <div>Find out More!</div>
+          <Link to="/About">Find out More!</Link>
         </AboutContainer>
       </HomeContainer>
     );
@@ -34,8 +35,14 @@ const HomeContainer = styled.section`
   width: 100%;
 `;
 
+// const PhotoDiv = styled.section`
+// background: cream;
+// `
+
 const AboutContainer = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   background: lavender;
   margin: 3%;
   padding: 2%;

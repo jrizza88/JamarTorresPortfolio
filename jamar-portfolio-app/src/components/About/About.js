@@ -6,7 +6,7 @@ const About = () => (
     <AboutHeadline>
       I create for the web and love tech. Get to know me!
     </AboutHeadline>
-    <div>
+    <AboutMiniContainer>
       <AboutDivs>
         Jamar is a passionate web developer with a strong interest in product
         management. He enjoys creating interactive and intuitive experiences. He
@@ -29,7 +29,7 @@ const About = () => (
         Currently, Jamar is looking to transition into the world of web
         development to jumpstart his next career endeavor.
       </AboutDivs>
-    </div>
+    </AboutMiniContainer>
   </AboutContainer>
 );
 
@@ -39,9 +39,17 @@ const AboutContainer = styled.section`
   flex-direction: column;
 `;
 
+const AboutMiniContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+`;
+
 const AboutHeadline = styled.h1`
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  padding-top: 10px;
   font-size: 1rem;
 `;
 
