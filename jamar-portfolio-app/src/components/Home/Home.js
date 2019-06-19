@@ -5,7 +5,7 @@ import HomeImage from "../../assets/JamarPortfolio.jpg"
 
 const FeatureImg = styled.img`
   width: 100%;
-  position: relative;
+  position: fixed;
 `;
 
 class Home extends React.Component {
@@ -20,13 +20,13 @@ class Home extends React.Component {
             src={require("../../assets/JamarPortfolio.jpg")}
             alt="profilePhoto"
           />
-          <AboutContainer>
-            <p>
-              My name is Jamar, and I like to create and contribute to the world
-              of web development.
-            </p>
-            <Link to="/About">Find out More!</Link>
-          </AboutContainer>
+                    <AboutContainer>
+              <p>
+                My name is Jamar, and I like to create and contribute to the world
+                of web development.
+              </p>
+              <Link to="/About">Find out More!</Link>
+            </AboutContainer>
         </HomeContainer>
       </MainHomeContainer>
     );
@@ -54,12 +54,14 @@ const HomeContainer = styled.section`
 
 const AboutContainer = styled.div`
   display: flex;
+  position: absolute;
   flex-direction: column;
   align-items: center;
   background: lavender;
-  margin: 3%;
   padding: 2%;
-  margin-bottom: 25%;
+  width: 50%;
+  max-width: 250px;
+  margin-top: 20%;
 `;
 
 export default Home;
