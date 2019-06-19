@@ -107,7 +107,8 @@ const Container = styled.section`
   justify-content: space-between;
   max-width: 100%;
   width: 100%;
-`;
+  background: #f2e7d9  
+`; // antiquewhite^
 const BodyContainer = styled.section`
   display: flex;
   flex-direction: column;
