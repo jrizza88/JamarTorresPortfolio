@@ -8,6 +8,9 @@ const About = () => (
     </AboutHeadline>
     <AboutMiniContainer>
       <AboutDivs>
+      <AboutHeadline>
+      Jamar as a developer
+    </AboutHeadline>
         Jamar is a passionate web developer with a strong interest in product
         management. He enjoys creating interactive and intuitive experiences. He
         believes having a strong front-end is central to any and every idea and
@@ -18,6 +21,9 @@ const About = () => (
         general, he is always willing to take on different approaches.
       </AboutDivs>
       <AboutDivs>
+      <AboutHeadline>
+      More about Jamar!
+    </AboutHeadline>
         Jamar Torres was born in Boston, MA. He graduated at Northeastern
         University with a BA in International Affairs. Jamar has extensive
         experience in international issues, travel and cultural understanding.
