@@ -62,6 +62,7 @@ const AboutContainer = styled.div`
   width: 50%;
   max-width: 250px;
   margin-top: 20%;
+  margin-left: -15%;
 `;
 
 export default Home;
