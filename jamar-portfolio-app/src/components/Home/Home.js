@@ -20,6 +20,11 @@ class Home extends React.Component {
             src={require("../../assets/JamarPortfolio.jpg")}
             alt="profilePhoto"
           />
+           {/* <img
+            src={require("../../assets/JamarPortfolio.jpg")}
+            alt="profilePhoto"
+            class
+          /> */}
                     <AboutContainer>
               <p>
                 My name is Jamar, and I like to create and contribute to the world
@@ -48,9 +53,6 @@ const HomeContainer = styled.section`
   width: 100%;
 `;
 
-// const PhotoDiv = styled.section`
-// background: cream;
-// `
 
 const AboutContainer = styled.div`
   display: flex;

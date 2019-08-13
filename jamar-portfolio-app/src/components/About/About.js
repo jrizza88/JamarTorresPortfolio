@@ -49,6 +49,7 @@ const AboutMiniContainer = styled.section`
   display: flex;
   flex-direction: column;
   margin: 5%;
+  padding: 5%;
 `;
 
 const AboutHeadline = styled.h1`
