@@ -26,10 +26,10 @@ class Home extends React.Component {
             class
           /> */}
           <AboutContainer>
-            <p>
+            <PWording>
               My name is Jamar, and I like to create and contribute to the world
               of web development.
-            </p>
+            </PWording>
             <Link to="/About">Find out More!</Link>
           </AboutContainer>
         </HomeContainer>
@@ -59,12 +59,17 @@ const AboutContainer = styled.div`
   flex-direction: column;
   align-items: center;
   background: lavender;
+  justify-content: space-between;
   border-radius: 10%;
   padding: 2%;
   width: 50%;
   max-width: 250px;
   margin-top: 20%;
   margin-left: -15%;
+`;
+
+const PWording = styled.div`
+  margin-left: 5%;
 `;
 
 export default Home;
