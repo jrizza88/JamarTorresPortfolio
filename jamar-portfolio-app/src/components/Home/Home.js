@@ -1,6 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import HomeImage from "../../assets/JamarPortfolio.jpg";
+
+const FeatureImg = styled.img`
+  width: 100%;
+  position: fixed;
+`;
 
 class Home extends React.Component {
   // state = {
@@ -8,22 +14,34 @@ class Home extends React.Component {
   // }
   render() {
     return (
-      <HomeContainer>
-        <img
-          src="https://media.licdn.com/dms/image/C4D03AQHUsdqjuiSVNg/profile-displayphoto-shrink_200_200/0?e=1565827200&v=beta&t=lJaIJKdlE1RYhq3lTWTm_un-LXs09ff3mbg0176KeBw"
-          alt="profilePhoto"
-        />
-        <AboutContainer>
-          <p>
-            My name is Jamar, and I like to create and contribute to the world
-            of web development.
-          </p>
-          <Link to="/About">Find out More!</Link>
-        </AboutContainer>
-      </HomeContainer>
+      <MainHomeContainer>
+        <HomeContainer>
+          <FeatureImg
+            src={require("../../assets/JamarPortfolio.jpg")}
+            alt="profilePhoto"
+          />
+          {/* <img
+            src={require("../../assets/JamarPortfolio.jpg")}
+            alt="profilePhoto"
+            class
+          /> */}
+          <AboutContainer>
+            <PWording>
+              My name is Jamar, and I like to create and contribute to the world
+              of web development.
+            </PWording>
+            <Link to="/About">Find out More!</Link>
+          </AboutContainer>
+        </HomeContainer>
+      </MainHomeContainer>
     );
   }
 }
+
+const MainHomeContainer = styled.div`
+  width: 100%;
+  background-image: url(${HomeImage});
+`;
 
 const HomeContainer = styled.section`
   display: flex;
@@ -35,17 +53,23 @@ const HomeContainer = styled.section`
   width: 100%;
 `;
 
-// const PhotoDiv = styled.section`
-// background: cream;
-// `
-
 const AboutContainer = styled.div`
   display: flex;
+  position: absolute;
   flex-direction: column;
   align-items: center;
   background: lavender;
-  margin: 3%;
+  justify-content: space-between;
+  border-radius: 10%;
   padding: 2%;
+  width: 50%;
+  max-width: 250px;
+  margin-top: 20%;
+  margin-left: -15%;
+`;
+
+const PWording = styled.div`
+  margin-left: 5%;
 `;
 
 export default Home;

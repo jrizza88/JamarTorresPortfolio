@@ -3,6 +3,7 @@ import Modal from "react-modal";
 import styled from "styled-components";
 import { Route, withRouter } from "react-router-dom";
 import Header from "./components/Reusables/Header";
+// import Header2 from "./components/Reusables/Header2";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
@@ -43,20 +44,20 @@ class App extends React.Component {
   render() {
     return (
       <Container>
-        {/* <Header /> */}
         <BodyContainer>
-          <ModalDiv isOpen={this.state.modal}>
+        <Header />
+          {/* <ModalDiv isOpen={this.state.modal}>
             <div onClick={this.closeModal}>
               <Header />
             </div>
             <ModalButton type="onSubmit" onClick={this.closeModal}>
               X
             </ModalButton>
-          </ModalDiv>
-          <Headline>
+          </ModalDiv> */}
+          {/* <Headline>
             <HeaderDiv>Jamar Torres</HeaderDiv>
             <HeaderDiv onClick={this.openModal}>Menu</HeaderDiv>
-          </Headline>
+          </Headline> */}
           <Route exact path="/" component={Home} />
           <Route exact path="/About" component={About} />
           <Route exact path="/Projects" component={Projects} />
@@ -93,7 +94,7 @@ const ModalButton = styled.button`
   padding: 5px 30px;
   margin-right: 20px;
   font-size: 1.4em;
-  background: #f4b4c3;
+  background: #d7bbed;
   color: #fcfcfb;
   display: block;
   right: 0;
@@ -107,7 +108,8 @@ const Container = styled.section`
   justify-content: space-between;
   max-width: 100%;
   width: 100%;
-`;
+  background: #f2e7d9  
+`; // antiquewhite^
 const BodyContainer = styled.section`
   display: flex;
   flex-direction: column;
