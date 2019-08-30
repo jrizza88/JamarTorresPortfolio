@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
             <NavLink to="/About" component={About}><Button color="inherit">About</Button></NavLink>
             <NavLink to="/Projects" component={Projects}><Button color="inherit">Projects</Button></NavLink>
             <NavLink to="/Resume" component={Resume}><Button color="inherit">Resume</Button></NavLink>
-            <NavLink to="/About" component={About}><Button color="inherit">Posts</Button></NavLink>
+            <NavLink to="/Posts" component={Posts}><Button color="inherit">Posts</Button></NavLink>
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
               <MenuIcon />
             </IconButton>
