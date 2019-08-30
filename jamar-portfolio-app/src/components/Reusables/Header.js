@@ -6,85 +6,53 @@ import Projects from "../Projects/Projects";
 import Resume from "../Resume/Resume";
 import Posts from "../Posts/Posts";
 import { NavLink } from "react-router-dom";
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
-const HeaderContainer = styled.div`
-  display: flex;
-  position: absolute;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-self: flex-start;
-  border-right: 1px solid black;
-  width: 100%;
-  height: 100vh;
-  text-decoration: none;
-  border-radius: 5px;
-  background-color: black;
-  opacity: 0.8;
-  color: white;
-`;
 
-const NavContainer = styled.div`
-  display: flex;
-  margin-top: 10%;
-  flex-direction: column;
-  align-items: flex-start;
-  text-decoration: none;
-  margin-left: 5%;
-  &:focus,
-  &:hover,
-  &:visited,
-  &:link,
-  &:active {
-    text-decoration: none;
-  }
-`;
+const useStyles = makeStyles(theme => ({
+    root: {
+      flexGrow: 1,
+    },
+    menuButton: {
+      marginRight: theme.spacing(2),
+    },
+    title: {
+      flexGrow: 1,
+    },
+  }));
 
-const NavDivs = styled.div`
-  display: flex;
-  padding: 10% 0 10% 1%;
-  font-size: 2rem;
-  text-decoration: none;
-  &:focus,
-  &:hover,
-  &:visited,
-  &:link,
-  &:active {
-    text-decoration: none;
-  }
-`;
-
-class Header extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      // modal: false
-    };
-  }
-
-  render() {
+  const Header = () => {
+    const classes = useStyles();
+  
     return (
-      <HeaderContainer>
-        <NavContainer>
-          <NavLink to="/" component={Home}>
-            <NavDivs>Home</NavDivs>
-          </NavLink>
-          <NavLink to="/About" component={About}>
-            <NavDivs>About</NavDivs>
-          </NavLink>
-          <NavLink to="/Projects" component={Projects}>
-            <NavDivs>Projects</NavDivs>
-          </NavLink>
-          <NavLink to="/Resume" component={Resume}>
-            <NavDivs>Resume</NavDivs>
-          </NavLink>
-          <NavLink to="/Posts" component={Posts}>
-            <NavDivs>Posts</NavDivs>
-          </NavLink>
-        </NavContainer>
-      </HeaderContainer>
+      <div className={classes.root}>
+        <AppBar position="static">
+          <Toolbar>
+            {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+              <MenuIcon />
+            </IconButton> */}
+            
+                <Typography variant="h6" className={classes.title}>
+                <NavLink to ="/" component={Home}>Jamar Torres</NavLink>
+                </Typography>
+           
+            <NavLink to="/About" component={About}><Button color="inherit">About</Button></NavLink>
+            <NavLink to="/Projects" component={Projects}><Button color="inherit">Projects</Button></NavLink>
+            <NavLink to="/Resume" component={Resume}><Button color="inherit">Resume</Button></NavLink>
+            <NavLink to="/About" component={About}><Button color="inherit">Posts</Button></NavLink>
+            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+              <MenuIcon />
+            </IconButton>
+          </Toolbar>
+        </AppBar>
+      </div>
     );
   }
-}
 
-export default Header;
+  export default Header;

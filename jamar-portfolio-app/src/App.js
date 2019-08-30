@@ -3,6 +3,7 @@ import Modal from "react-modal";
 import styled from "styled-components";
 import { Route, withRouter } from "react-router-dom";
 import Header from "./components/Reusables/Header";
+// import Header2 from "./components/Reusables/Header2";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
@@ -43,20 +44,20 @@ class App extends React.Component {
   render() {
     return (
       <Container>
-        {/* <Header /> */}
         <BodyContainer>
-          <ModalDiv isOpen={this.state.modal}>
+        <Header />
+          {/* <ModalDiv isOpen={this.state.modal}>
             <div onClick={this.closeModal}>
               <Header />
             </div>
             <ModalButton type="onSubmit" onClick={this.closeModal}>
               X
             </ModalButton>
-          </ModalDiv>
-          <Headline>
+          </ModalDiv> */}
+          {/* <Headline>
             <HeaderDiv>Jamar Torres</HeaderDiv>
             <HeaderDiv onClick={this.openModal}>Menu</HeaderDiv>
-          </Headline>
+          </Headline> */}
           <Route exact path="/" component={Home} />
           <Route exact path="/About" component={About} />
           <Route exact path="/Projects" component={Projects} />
