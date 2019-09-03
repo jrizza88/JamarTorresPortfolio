@@ -39,11 +39,11 @@ const useStyles = makeStyles(theme => ({
   },
   cardContent: {
     flexGrow: 1
-  },
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6)
   }
+  // footer: {
+  //   backgroundColor: theme.palette.background.paper,
+  //   padding: theme.spacing(6)
+  // }
 }));
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -136,6 +136,7 @@ const Projects = () => {
         </Container>
       </main>
       {/* Footer */}
+       {/*
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
           Footer
@@ -149,7 +150,8 @@ const Projects = () => {
           Something here to give the footer a purpose!
         </Typography>
         {/* <Copyright /> */}
-      </footer>
+      {/* </footer> 
+      */}
       {/* End footer */}
     </React.Fragment>
   );

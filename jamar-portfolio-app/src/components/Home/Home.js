@@ -15,22 +15,17 @@ class Home extends React.Component {
   render() {
     return (
       <MainHomeContainer>
-        <HomeContainer>
           <FeatureImg
             src={require("../../assets/JamarPortfolio.jpg")}
             alt="profilePhoto"
           />
-          {/* <img
-            src={require("../../assets/JamarPortfolio.jpg")}
-            alt="profilePhoto"
-            class
-          /> */}
+        <HomeContainer>
           <AboutContainer>
             <PWording>
               My name is Jamar, and I like to create and contribute to the world
               of web development.
             </PWording>
-            <Link to="/About">Find out More!</Link>
+            <Link to="/About" style={{ textDecoration: 'none' }}>Find out More!</Link>
           </AboutContainer>
         </HomeContainer>
       </MainHomeContainer>
@@ -40,8 +35,12 @@ class Home extends React.Component {
 
 const MainHomeContainer = styled.div`
   width: 100%;
-  background-image: url(${HomeImage});
 `;
+
+// const MainHomeContainer = styled.div`
+//   width: 100%;
+//   background-image: url(${HomeImage});
+// `;
 
 const HomeContainer = styled.section`
   display: flex;
@@ -64,7 +63,7 @@ const AboutContainer = styled.div`
   padding: 2%;
   width: 50%;
   max-width: 250px;
-  margin-top: 20%;
+  margin-top: 15%;
   margin-left: -15%;
 `;
 

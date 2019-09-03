@@ -3,7 +3,6 @@ import Modal from "react-modal";
 import styled from "styled-components";
 import { Route, withRouter } from "react-router-dom";
 import Header from "./components/Reusables/Header";
-// import Header2 from "./components/Reusables/Header2";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
@@ -81,25 +80,25 @@ class App extends React.Component {
 //   }
 // };
 
-const ModalDiv = styled(Modal)`
-  top: "50%";
-  left: "50%";
-  right: "auto";
-  bottom: "auto";
-  margin-right: "-50%";
-  transform: "translate(-50%, -50%)";
-`;
+// const ModalDiv = styled(Modal)`
+//   top: "50%";
+//   left: "50%";
+//   right: "auto";
+//   bottom: "auto";
+//   margin-right: "-50%";
+//   transform: "translate(-50%, -50%)";
+// `;
 
-const ModalButton = styled.button`
-  padding: 5px 30px;
-  margin-right: 20px;
-  font-size: 1.4em;
-  background: #d7bbed;
-  color: #fcfcfb;
-  display: block;
-  right: 0;
-  position: fixed;
-`;
+// const ModalButton = styled.button`
+//   padding: 5px 30px;
+//   margin-right: 20px;
+//   font-size: 1.4em;
+//   background: #d7bbed;
+//   color: #fcfcfb;
+//   display: block;
+//   right: 0;
+//   position: fixed;
+// `;
 
 const Container = styled.section`
   display: flex;
@@ -117,18 +116,18 @@ const BodyContainer = styled.section`
   width: 100%;
 `;
 
-const Headline = styled.div`
-  display: flex;
-  position: relative;
-  /* padding-left: 0.5%; */
-  padding: 1% 2% 1% 2%;
-  font-size: 2.3rem;
-  justify-content: space-between;
-  border: solid green 1px;
-`;
+// const Headline = styled.div`
+//   display: flex;
+//   position: relative;
+//   /* padding-left: 0.5%; */
+//   padding: 1% 2% 1% 2%;
+//   font-size: 2.3rem;
+//   justify-content: space-between;
+//   border: solid green 1px;
+// `;
 
-const HeaderDiv = styled.div`
-  display: flex;
-`;
+// const HeaderDiv = styled.div`
+//   display: flex;
+// `;
 
 export default withRouter(App);

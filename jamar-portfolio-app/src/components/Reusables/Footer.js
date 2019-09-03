@@ -18,8 +18,8 @@ const FooterContainer = styled.footer`
   left: 0;
   bottom: 0;
   right: 0;
-  border: 2px solid purple;
-  background: purple;
+  // border: 2px solid purple;
+  background: mediumpurple;
 `;
 
 const CopyRight = styled.p`
