@@ -2,3 +2,8 @@
 base = "jamar-portfolio-app/"
 publish = "jamar-portfolio-app/build/"
 command = "yarn build"
+
+[[redirects]]
+from ="/*"
+to = "/index.html"
+status = 200
