@@ -1,0 +1,4 @@
+[build]
+base = "jamar-portfolio-app/"
+publish = "jamar-portfolio-app/build/"
+command = "yarn build"
