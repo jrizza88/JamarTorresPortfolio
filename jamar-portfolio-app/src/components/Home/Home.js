@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import HomeImage from "../../assets/JamarPortfolio.jpg";
 
 const FeatureImg = styled.img`
   width: 100%;
+  height: 100%;
   position: fixed;
+  object-fit: cover;
 `;
 
 class Home extends React.Component {
