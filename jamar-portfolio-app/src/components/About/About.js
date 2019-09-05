@@ -114,19 +114,21 @@ const AboutMiniContainer = styled.section`
   padding: 5%;
 `;
 
-const AboutHeadline = styled.h1`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-top: 10px;
-  font-size: 2rem;
-`;
+// const AboutHeadline = styled.h1`
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   padding-top: 10px;
+//   font-size: 2rem;
+// `;
 
 const AboutMiniHeadline = styled.h1`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   padding-top: 10px;
+  text-decoration: underline;
+  text-decoration-color: #b0b0e3;
   font-size: 1.5rem;
 `;
 
