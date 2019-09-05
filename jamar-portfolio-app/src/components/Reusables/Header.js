@@ -53,14 +53,14 @@ const useStyles = makeStyles(theme => ({
       textDecoration: "none",
     },
     toolbar: {
-      [theme.breakpoints.down("sm")]: {
+      [theme.breakpoints.down("xs")]: {
         display: "none"
       }
     },
     toolbarMobile: {
       justifyContent: "space-evenly",
       display: "none",
-      [theme.breakpoints.down("sm")]: {
+      [theme.breakpoints.down("xs")]: {
         display: "flex",
         justifyContent: "space-between"
       },
