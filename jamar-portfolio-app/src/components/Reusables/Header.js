@@ -2,8 +2,9 @@ import React from "react";
 import Home from "../Home/Home";
 import About from "../About/About";
 import Projects from "../Projects/Projects";
-import Resume from "../Resume/Resume";
-import Posts from "../Posts/Posts";
+import Contact from "../Contact/Contact";
+// import Resume from "../Resume/Resume";
+// import Posts from "../Posts/Posts";
 import { NavLink } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -102,8 +103,9 @@ const useStyles = makeStyles(theme => ({
            
             <NavLink to="/About" component={About} className={classes.a}><Button className={classes.title}>About</Button></NavLink>
             <NavLink to="/Projects" component={Projects} className={classes.a}><Button color="inherit" className={classes.title}>Projects</Button></NavLink>
-            <NavLink to="/Resume" component={Resume} className={classes.a}><Button color="inherit" className={classes.title}>Resume</Button></NavLink>
-            <NavLink to="/Posts" component={Posts} className={classes.a}><Button color="inherit" className={classes.title}>Posts</Button></NavLink>
+            <NavLink to="/Contact" component={Contact} className={classes.a}><Button color="inherit" className={classes.title}>Contact</Button></NavLink>
+            {/* <NavLink to="/Resume" component={Resume} className={classes.a}><Button color="inherit" className={classes.title}>Resume</Button></NavLink>
+            <NavLink to="/Posts" component={Posts} className={classes.a}><Button color="inherit" className={classes.title}>Posts</Button></NavLink> */}
             {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
               <MenuIcon />
             </IconButton> */}
@@ -119,8 +121,9 @@ const useStyles = makeStyles(theme => ({
               <List className={classes.mobileMenu}>
                 <ListItem><NavLink to="/About" component={About} className={classes.a}><Button className={classes.titleMobile}>About</Button></NavLink></ListItem>
                 <ListItem><NavLink to="/Projects" component={Projects} className={classes.a}><Button color="inherit" className={classes.titleMobile}>Projects</Button></NavLink></ListItem>
-                <ListItem><NavLink to="/Resume" component={Resume} className={classes.a}><Button color="inherit" className={classes.titleMobile}>Resume</Button></NavLink></ListItem>
-                <ListItem><NavLink to="/Posts" component={Posts} className={classes.a}><Button color="inherit" className={classes.titleMobile}>Posts</Button></NavLink></ListItem>
+                <ListItem><NavLink to="/Contact" component={Contact} className={classes.a}><Button color="inherit" className={classes.titleMobile}>Contact</Button></NavLink></ListItem>
+                {/* <ListItem><NavLink to="/Resume" component={Resume} className={classes.a}><Button color="inherit" className={classes.titleMobile}>Resume</Button></NavLink></ListItem>
+                <ListItem><NavLink to="/Posts" component={Posts} className={classes.a}><Button color="inherit" className={classes.titleMobile}>Posts</Button></NavLink></ListItem> */}
               </List>
             </Drawer>
           </Toolbar>

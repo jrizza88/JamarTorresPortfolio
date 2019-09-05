@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Footer = props => (
   <FooterContainer>
-    <CopyRight>©2019 Jamar Esai Torres</CopyRight>
+    <CopyRight>© 2019 Jamar Esai Torres</CopyRight>
   </FooterContainer>
 );
 
@@ -14,7 +14,9 @@ const FooterContainer = styled.footer`
   width: 100%;
   position: static;
   // z-index: 1;
-  padding-bottom: 5%;
+  padding-top: 4.5%
+  padding-left: 2.3%;
+  padding-bottom: 4%;
   // top: 0;
   left: 0;
   bottom: 0;
@@ -25,8 +27,9 @@ const FooterContainer = styled.footer`
 
 const CopyRight = styled.p`
   float: left;
-  font-size: 0.7rem;
+  font-size: 1rem;
   margin-top: 0;
+  color: #fff;
 `;
 
 export default Footer;

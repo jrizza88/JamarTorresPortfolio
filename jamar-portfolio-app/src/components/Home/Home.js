@@ -77,4 +77,5 @@ const PWording = styled.div`
   align-items: center;
 `;
 
+
 export default Home;
