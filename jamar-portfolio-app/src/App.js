@@ -107,7 +107,7 @@ const Container = styled.section`
   justify-content: space-between;
   max-width: 100%;
   width: 100%;
-  background: F8F9F9;
+  background: #F8F9F9;
   // background: #f2e7d9  
 `; // antiquewhite^
 const BodyContainer = styled.section`
