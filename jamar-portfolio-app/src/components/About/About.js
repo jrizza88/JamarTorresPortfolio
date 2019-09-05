@@ -129,7 +129,8 @@ const AboutMiniHeadline = styled.h1`
   padding-top: 10px;
   text-decoration: underline;
   text-decoration-color: #b0b0e3;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 `;
 
 const AboutDivs = styled.div`
