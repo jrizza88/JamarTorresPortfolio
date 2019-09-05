@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import Footer from "../Reusables/FooterHome";
 
 const FeatureImg = styled.img`
   width: 100%;
@@ -26,9 +27,10 @@ class Home extends React.Component {
               My name is Jamar, and I like to create and contribute to the world
               of web development.
             </PWording>
-            <Link to="/About" style={{ textDecoration: 'none' }}>Find out More!</Link>
+            <Link to="/About" style={{ textDecoration: 'none', color: 'black', fontStyle: 'italic', fontWeight: 'bold', marginRight: "5%" }}>Check me out!</Link>
           </AboutContainer>
         </HomeContainer>
+        <Footer />
       </MainHomeContainer>
     );
   }
@@ -36,6 +38,8 @@ class Home extends React.Component {
 
 const MainHomeContainer = styled.div`
   width: 100%;
+  // padding-bottom: 100vh;
+  // marginTop: 10,
 `;
 
 // const MainHomeContainer = styled.div`
@@ -58,7 +62,7 @@ const AboutContainer = styled.div`
   position: absolute;
   flex-direction: column;
   align-items: center;
-  background: lavender;
+  background: #FFCAD0;
   justify-content: space-between;
   border-radius: 10%;
   padding: 2%;
@@ -70,6 +74,7 @@ const AboutContainer = styled.div`
 
 const PWording = styled.div`
   margin-left: 5%;
+  align-items: center;
 `;
 
 export default Home;

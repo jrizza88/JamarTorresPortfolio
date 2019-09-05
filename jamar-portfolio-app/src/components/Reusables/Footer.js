@@ -12,14 +12,15 @@ const FooterContainer = styled.footer`
   flex-direction: column;
   justify-content: flex-end;
   width: 100%;
-  position: fixed;
+  position: static;
+  // z-index: 1;
   padding-bottom: 5%;
-  /* top: 0; */
+  // top: 0;
   left: 0;
   bottom: 0;
   right: 0;
-  // border: 2px solid purple;
-  background: mediumpurple;
+  background: #102542;
+  // clear: both;
 `;
 
 const CopyRight = styled.p`

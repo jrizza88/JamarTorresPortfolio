@@ -20,7 +20,10 @@ import ListItem from "@material-ui/core/ListItem";
 const useStyles = makeStyles(theme => ({
     root: {
       flexGrow: 1,
-      background: "mediumpurple",
+      marginTop: 0,
+      // background: "#4A4063",
+      position: "static",
+      background: "#102542",
       color: "#fff",
       textDecoration: "none",
     },

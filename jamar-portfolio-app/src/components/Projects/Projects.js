@@ -39,6 +39,16 @@ const useStyles = makeStyles(theme => ({
   },
   cardContent: {
     flexGrow: 1
+  },
+  mainButton: {
+    background: "#b0b0e3",
+    "&:hover": {
+      background: "#102542",
+      color: "#fff"
+    }
+  },
+  pageMargin: {
+    marginBottom: "10%"
   }
   // footer: {
   //   backgroundColor: theme.palette.background.paper,
@@ -53,14 +63,6 @@ const Projects = () => {
   return (
     <React.Fragment>
       <CssBaseline />
-      {/* <AppBar position="relative">
-        <Toolbar>
-          <CameraIcon className={classes.icon} />
-          <Typography variant="h6" color="inherit" noWrap>
-            Album layout
-          </Typography>
-        </Toolbar>
-      </AppBar> */}
       <main>
         {/* Hero unit */}
         <div className={classes.heroContent}>
@@ -88,7 +90,7 @@ const Projects = () => {
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
-                  <Button variant="contained" color="primary">
+                  <Button variant="contained" color="primary" className={classes.mainButton}>
                     GitHub Page
                   </Button>
                 </Grid>
