@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 // import Button from "@material-ui/core/Button";
-import Paper from "@material-ui/core/Paper";
+// import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles(theme => ({
@@ -56,10 +56,7 @@ const About = () => {
               color="textSecondary"
               paragraph
             >
-      {/* <AboutHeadline>
-        I create for the web and love tech. Get to know me!
-      </AboutHeadline> */}
-  
+              Find out below!
             </Typography>
 
           </Container>
@@ -114,6 +111,8 @@ const AboutMiniContainer = styled.section`
   padding: 5%;
 `;
 
+
+
 // const AboutHeadline = styled.h1`
 //   display: flex;
 //   flex-direction: row;
@@ -129,14 +128,16 @@ const AboutMiniHeadline = styled.h1`
   padding-top: 10px;
   text-decoration: underline;
   text-decoration-color: #b0b0e3;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  
 `;
 
 const AboutDivs = styled.div`
   display: flex;
   flex-direction: column;
   padding: 5%;
+  font-size: 1.7rem;
   margin-top: -10%;
 `;
 
