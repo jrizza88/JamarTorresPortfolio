@@ -9,7 +9,6 @@ const FeatureImg = styled.img`
   // z-index: 0;
   position: fixed;
   object-fit: cover;
-  
 `;
 
 class Home extends React.Component {

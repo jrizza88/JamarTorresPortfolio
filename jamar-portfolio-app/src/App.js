@@ -65,8 +65,9 @@ const Container = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  max-width: 100%;
+  // max-width: 1200px;
   width: 100%;
+  overflow-x:hidden;
   background: #F8F9F9;
   // background: #f2e7d9  
 `; // antiquewhite^
@@ -76,6 +77,7 @@ const BodyContainer = styled.section`
   flex-direction: column;
   max-width: 100%;
   width: 100%;
+  overflow-x:hidden;
 `;
 
 // const Headline = styled.div`
