@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from "styled-components";
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -14,6 +15,9 @@ import Container from "@material-ui/core/Container";
 const useStyles = makeStyles(theme => ({
     icon: {
       marginRight: theme.spacing(2)
+    },
+    background: {
+      backgroundColor: "#fafafa",
     },
     heroContent: {
       backgroundColor: theme.palette.background.paper,
@@ -37,6 +41,12 @@ const useStyles = makeStyles(theme => ({
     cardContent: {
       flexGrow: 1
     },
+    contact: {
+      display: "flex",
+      justifyItems: "center",
+      justifyContent: "center",
+      alignItems: "space-evenly"
+    },
     mainButton: {
       background: "#b0b0e3",
       "&:hover": {
@@ -47,21 +57,18 @@ const useStyles = makeStyles(theme => ({
     pageMargin: {
       marginBottom: "10%"
     }
-    // footer: {
-    //   backgroundColor: theme.palette.background.paper,
-    //   padding: theme.spacing(6)
-    // }
   }));
 
 const Contact = () => {
     const classes = useStyles();
     return (
+    <div className={classes.root}>
     <React.Fragment>
     <CssBaseline />
     <main>
       {/* Hero unit */}
       <div className={classes.heroContent}>
-        <Container maxWidth="sm">
+        <Container maxWidth="lg">
           <Typography
             component="h1"
             variant="h2"
@@ -77,17 +84,46 @@ const Contact = () => {
             color="textSecondary"
             paragraph
           >
-          You can reach me by email, social media and more!
+            <div className={classes.contact}>
+            If you would like to get in contact with me, you can email me at jamar@inc.sh
+            </div>
           </Typography>
-          {/* <div className={classes.heroButtons}>
-            <Grid container spacing={2} justify="center">
-            </Grid>
-          </div> */}
+          <Typography
+            variant="h4"
+            align="start"
+            color="textPrimary"
+            gutterBottom
+          >
+            Links
+          </Typography>
+          <Grid container spacing={2} justify="center" className={classes.background}>
+            <SocialDiv>
+              <li>LinkedIn</li>
+              <li>Github</li>
+              <li>Twitter</li>
+            </SocialDiv>
+          </Grid>
         </Container>
       </div>
       </main>
       </React.Fragment>
+      </div>
     );
 };
+
+const SocialDiv = styled.section`
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  // justify-content: flex-end;
+  width: 100%;
+  position: static;
+  padding-top: 4.5%
+  padding-left: 2.3%;
+  padding-bottom: 4%;
+  // left: 0;
+  // bottom: 0;
+  // right: 0;
+`;
 
 export default Contact;

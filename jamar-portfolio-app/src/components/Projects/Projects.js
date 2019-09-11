@@ -101,7 +101,7 @@ const Projects = () => {
             </div>
           </Container>
         </div>
-        <Container className={classes.cardGrid} maxWidth="md">
+        <Container className={classes.cardGrid} maxWidth="lg">
           {/* End hero unit */}
           <Grid container spacing={6}>
             {cards.map(card => (
