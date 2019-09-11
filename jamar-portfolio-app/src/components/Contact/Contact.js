@@ -13,6 +13,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+    background: "white",
+    height: "90vh"
+  },
     icon: {
       marginRight: theme.spacing(2)
     },
@@ -89,8 +94,8 @@ const Contact = () => {
             </div>
           </Typography>
           <Typography
-            variant="h4"
-            align="start"
+            variant="h3"
+            align="center"
             color="textPrimary"
             gutterBottom
           >

@@ -6,8 +6,10 @@ import Footer from "../Reusables/FooterHome";
 const FeatureImg = styled.img`
   width: 100%;
   height: 100%;
+  // z-index: 0;
   position: fixed;
   object-fit: cover;
+  
 `;
 
 class Home extends React.Component {
@@ -16,11 +18,16 @@ class Home extends React.Component {
   // }
   render() {
     return (
-      <MainHomeContainer>
+      <div>
           <FeatureImg
             src={require("../../assets/JamarPortfolio.jpg")}
             alt="profilePhoto"
           />
+      <MainHomeContainer>
+          {/* <FeatureImg
+            src={require("../../assets/JamarPortfolio.jpg")}
+            alt="profilePhoto"
+          /> */}
         <HomeContainer>
           <AboutContainer>
             <PWording>
@@ -32,6 +39,7 @@ class Home extends React.Component {
         </HomeContainer>
         <Footer />
       </MainHomeContainer>
+      </div>
     );
   }
 }
@@ -60,6 +68,7 @@ const HomeContainer = styled.section`
 const AboutContainer = styled.div`
   display: flex;
   position: absolute;
+  z-index: 1;
   flex-direction: column;
   align-items: center;
   background: #FFCAD0;
