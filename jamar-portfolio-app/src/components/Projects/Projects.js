@@ -180,7 +180,7 @@ const Projects = () => {
               </Card>
             </Grid>
 
-            <Grid xs={12} sm={6} md={4} className={classes.grid}>
+            {/* <Grid xs={12} sm={6} md={4} className={classes.grid}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
@@ -205,7 +205,7 @@ const Projects = () => {
                   </Button>
                 </CardActions>
               </Card>
-            </Grid>
+            </Grid> */}
             {/* ) */}
             {/* )
             } */}
