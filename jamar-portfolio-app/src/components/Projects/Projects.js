@@ -59,7 +59,7 @@ const useStyles = makeStyles(theme => ({
   // }
 }));
 
-const cards = [1, 2, 3, 4, 5, 6];
+// const cards = [1, 2, 3, 4, 5, 6];
 const Projects = () => {
   const classes = useStyles();
 
@@ -97,6 +97,7 @@ const Projects = () => {
                     variant="contained"
                     color="primary"
                     className={classes.mainButton}
+                    href="https://github.com/jrizza88"
                   >
                     GitHub Page
                   </Button>
@@ -179,7 +180,7 @@ const Projects = () => {
               </Card>
             </Grid>
 
-            <Grid xs={12} sm={6} md={4} className={classes.grid}>
+            {/* <Grid xs={12} sm={6} md={4} className={classes.grid}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
@@ -204,7 +205,7 @@ const Projects = () => {
                   </Button>
                 </CardActions>
               </Card>
-            </Grid>
+            </Grid> */}
             {/* ) */}
             {/* )
             } */}
