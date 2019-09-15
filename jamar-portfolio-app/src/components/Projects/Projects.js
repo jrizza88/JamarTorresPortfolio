@@ -180,6 +180,64 @@ const Projects = () => {
               </Card>
             </Grid>
 
+            <Grid xs={12} sm={6} md={4} className={classes.grid}>
+              <Card className={classes.card}>
+                <CardMedia
+                  className={classes.cardMedia}
+                  image={require("../../assets/UI.png")}
+                  title="Image title"
+                />
+                <CardContent className={classes.cardContent}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    User Interface Project
+                  </Typography>
+                  <Typography>Vanilla JS based client project</Typography>
+                </CardContent>
+                <CardActions>
+                  <Button
+                    size="small"
+                    color="primary"
+                    href="https://protected-savannah-41015.herokuapp.com/"
+                  >
+                    View
+                  </Button>
+                  <Button
+                    size="small"
+                    color="primary"
+                    href="https://github.com/jrizza88/User-Interface-Project-Week"
+                  >
+                    GitHub
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+
+
+            <Grid xs={12} sm={6} md={4} className={classes.grid}>
+              <Card className={classes.card}>
+                <CardMedia
+                  className={classes.cardMedia}
+                  image={require("../../assets/backendExpat.png")}
+                  title="Image title"
+                />
+                <CardContent className={classes.cardContent}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Expat
+                  </Typography>
+                  <Typography>Backend database built with Node.Js</Typography>
+                </CardContent>
+                <CardActions>
+                  <Button
+                    size="small"
+                    color="primary"
+                    href="https://github.com/expatjournal-pt-042219/bw-pt-expatJournal-BE"
+                  >
+                    GitHub
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+
             {/* <Grid xs={12} sm={6} md={4} className={classes.grid}>
               <Card className={classes.card}>
                 <CardMedia
