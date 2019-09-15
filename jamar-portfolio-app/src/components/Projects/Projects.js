@@ -32,13 +32,15 @@ const useStyles = makeStyles(theme => ({
   },
   card: {
     height: "100%",
+    objectFit: "cover",
     display: "flex",
     flexDirection: "column",
     margin: 10
   },
   cardMedia: {
-    // paddingTop: "56.25%" // 16:9
-    paddingTop: "65%" // 16:9
+    paddingTop: "56.25%" // 16:9
+    // paddingTop: "65%" // 16:9
+    // paddingTop: "79%"
   },
   cardContent: {
     flexGrow: 1
