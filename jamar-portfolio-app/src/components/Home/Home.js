@@ -1,32 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import Footer from "../Reusables/FooterHome";
-
-const FeatureImg = styled.img`
-  width: 100%;
-  height: 100%;
-  // z-index: 0;
-  position: fixed;
-  object-fit: cover;
-`;
 
 class Home extends React.Component {
-  // state = {
-
-  // }
   render() {
     return (
-      <div>
+      <HomeBodyContainer>
         <FeatureImg
           src={require("../../assets/JamarPortfolio.jpg")}
           alt="profilePhoto"
         />
-        <MainHomeContainer>
-          {/* <FeatureImg
-            src={require("../../assets/JamarPortfolio.jpg")}
-            alt="profilePhoto"
-          /> */}
           <HomeContainer>
             <AboutContainer>
               <PWording>
@@ -47,23 +30,23 @@ class Home extends React.Component {
               </Link>
             </AboutContainer>
           </HomeContainer>
-          <Footer />
-        </MainHomeContainer>
-      </div>
+      </HomeBodyContainer>
     );
   }
 }
 
-const MainHomeContainer = styled.div`
+
+
+const FeatureImg = styled.img`
   width: 100%;
-  // padding-bottom: 100vh;
-  // marginTop: 10,
+  height: 100vh;
+  position: static;
+  object-fit: cover;
 `;
 
-// const MainHomeContainer = styled.div`
-//   width: 100%;
-//   background-image: url(${HomeImage});
-// `;
+const HomeBodyContainer = styled.div`
+  display: flex;
+`;
 
 const HomeContainer = styled.section`
   display: flex;
@@ -71,14 +54,11 @@ const HomeContainer = styled.section`
   align-items: center;
   justify-content: space-between;
   margin-top: 3%;
-  max-width: 100%;
-  width: 100%;
 `;
 
 const AboutContainer = styled.div`
   display: flex;
   position: absolute;
-  z-index: 1;
   opacity: 0.75;
   flex-direction: column;
   align-items: center;
@@ -90,7 +70,7 @@ const AboutContainer = styled.div`
   /* font-weight: 600; */
   max-width: 250px;
   margin-top: 15%;
-  margin-left: -15%;
+  margin-left: -70%;
 `;
 
 const PWording = styled.div`
