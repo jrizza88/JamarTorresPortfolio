@@ -14,6 +14,7 @@ import Container from "@material-ui/core/Container";
 import email from "../../assets/Email.png";
 import github from "../../assets/github-sign.png";
 import linkedin from "../../assets/linkedin-sign.png";
+import nyc from "../../assets/nyc.png";
 
 const ContactDiv = styled.div`
   display: flex;
@@ -32,11 +33,35 @@ const ImageCon = styled.div`
   }
 `;
 
+const SocialDiv = styled.section`
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  width: 100%;
+  position: static;
+  padding-top: 4.5%
+  padding-left: 2.3%;
+  padding-bottom: 4%;
+`;
+
+const CityContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  width: 100%;
+  position: static;
+`;
+const CityImg = styled.img`
+  width: 100%;
+  height: 55vh;
+  // position: static;
+  object-fit: cover;
+`;
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     background: "white",
-    height: "90vh"
   },
     icon: {
       marginRight: theme.spacing(2)
@@ -86,6 +111,9 @@ const useStyles = makeStyles(theme => ({
       fontSize: 20,
       // padding: "0 20px 20px 20px",
       textAlign: "center"
+    },
+    cityDiv: {
+      marginTop: "3%"
     }
   }));
 
@@ -118,14 +146,6 @@ const Contact = () => {
             Get in touch with me. There's more than one way!
             </div>
           </Typography>
-          {/* <Typography
-            variant="h3"
-            align="center"
-            color="textPrimary"
-            gutterBottom
-          >
-            Links
-          </Typography> */}
           <Grid container spacing={2} justify="center" className={classes.background}>
             <SocialDiv>
             <ContactDiv>
@@ -156,6 +176,24 @@ const Contact = () => {
             </ContactDiv>
             </SocialDiv>
           </Grid>
+          <Grid container spacing={2} justify="center"  className={classes.cityDiv}>
+          <Typography
+            variant="h5"
+            align="center"
+            color="textSecondary"
+            paragraph
+          >
+            <div className={classes.contact}>
+            Currently located in New York City
+            </div>
+          </Typography>
+          <CityContainer>
+              <CityImg
+              src={require("../../assets/nyc.png")}
+              alt="profilePhoto"
+            />
+          </CityContainer>
+          </Grid>
         </Container>
       </div>
       </main>
@@ -164,15 +202,5 @@ const Contact = () => {
     );
 };
 
-const SocialDiv = styled.section`
-  display: flex;
-  flex-direction: column;
-  font-size: 2rem;
-  width: 100%;
-  position: static;
-  padding-top: 4.5%
-  padding-left: 2.3%;
-  padding-bottom: 4%;
-`;
 
 export default Contact;
