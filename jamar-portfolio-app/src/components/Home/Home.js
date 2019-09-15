@@ -70,6 +70,7 @@ const AboutContainer = styled.div`
   z-index: 1;
   flex-direction: column;
   align-items: center;
+  opacity: .7;
   background: #FFCAD0;
   justify-content: space-between;
   border-radius: 10%;
