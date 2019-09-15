@@ -11,6 +11,26 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
+import email from "../../assets/Email.png";
+import github from "../../assets/github-sign.png";
+import linkedin from "../../assets/linkedin-sign.png";
+
+const ContactDiv = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+`;
+
+const ImageCon = styled.div`
+  width: 100%;
+  mad-width: 200px;
+  .icon {
+    border: none;
+    width: 100px;
+    max-width: 100px;
+    border-radius: 0;
+    margin: 10px;
+  }
+`;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -61,6 +81,11 @@ const useStyles = makeStyles(theme => ({
     },
     pageMargin: {
       marginBottom: "10%"
+    },
+    desc: {
+      fontSize: 20,
+      // padding: "0 20px 20px 20px",
+      textAlign: "center"
     }
   }));
 
@@ -90,22 +115,45 @@ const Contact = () => {
             paragraph
           >
             <div className={classes.contact}>
-            If you would like to get in contact with me, you can email me at jamar@inc.sh
+            Get in touch with me. There's more than one way!
             </div>
           </Typography>
-          <Typography
+          {/* <Typography
             variant="h3"
             align="center"
             color="textPrimary"
             gutterBottom
           >
             Links
-          </Typography>
+          </Typography> */}
           <Grid container spacing={2} justify="center" className={classes.background}>
             <SocialDiv>
-              <li>LinkedIn</li>
-              <li>Github</li>
-              <li>Twitter</li>
+            <ContactDiv>
+              <div>
+              <a target="_blank"    rel="noopener noreferrer" href="mailto:jamar@inc.sh">
+                <ImageCon>
+                  <img className="icon" src={email} alt="email icon" />
+                </ImageCon>
+              </a>
+                <Typography className={classes.desc}>jamar@inc.sh</Typography>
+              </div>
+              <div>
+              <a target="_blank"    rel="noopener noreferrer" href="https://github.com/jrizza88">
+                <ImageCon>
+                  <img className="icon" src={github} alt="GitHub icon" />
+                </ImageCon>
+              </a>
+              <Typography className={classes.desc}>@jrizza88</Typography>
+              </div>
+              <div>
+              <a target="_blank"    rel="noopener noreferrer" href="https://www.linkedin.com/in/jamartorres/">
+                <ImageCon>
+                  <img className="icon" src={linkedin} alt="LinkedIn icon" />
+                </ImageCon>
+              </a>
+              <Typography className={classes.desc}>jamartorres</Typography>
+              </div>
+            </ContactDiv>
             </SocialDiv>
           </Grid>
         </Container>
@@ -120,15 +168,11 @@ const SocialDiv = styled.section`
   display: flex;
   flex-direction: column;
   font-size: 2rem;
-  // justify-content: flex-end;
   width: 100%;
   position: static;
   padding-top: 4.5%
   padding-left: 2.3%;
   padding-bottom: 4%;
-  // left: 0;
-  // bottom: 0;
-  // right: 0;
 `;
 
 export default Contact;
