@@ -18,26 +18,37 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-          <FeatureImg
-            src={require("../../assets/JamarPortfolio.jpg")}
-            alt="profilePhoto"
-          />
-      <MainHomeContainer>
+        <FeatureImg
+          src={require("../../assets/JamarPortfolio.jpg")}
+          alt="profilePhoto"
+        />
+        <MainHomeContainer>
           {/* <FeatureImg
             src={require("../../assets/JamarPortfolio.jpg")}
             alt="profilePhoto"
           /> */}
-        <HomeContainer>
-          <AboutContainer>
-            <PWording>
-              My name is Jamar, and I like to create and contribute to the world
-              of web development.
-            </PWording>
-            <Link to="/About" style={{ textDecoration: 'none', color: 'black', fontStyle: 'italic', fontWeight: 'bold', marginRight: "5%" }}>Check me out!</Link>
-          </AboutContainer>
-        </HomeContainer>
-        <Footer />
-      </MainHomeContainer>
+          <HomeContainer>
+            <AboutContainer>
+              <PWording>
+                My name is Jamar, and I like to create and contribute to the
+                world of web development.
+              </PWording>
+              <Link
+                to="/About"
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  fontStyle: "italic",
+                  fontWeight: "bold",
+                  marginRight: "5%"
+                }}
+              >
+                Check me out!
+              </Link>
+            </AboutContainer>
+          </HomeContainer>
+          <Footer />
+        </MainHomeContainer>
       </div>
     );
   }
@@ -68,14 +79,15 @@ const AboutContainer = styled.div`
   display: flex;
   position: absolute;
   z-index: 1;
+  opacity: 0.75;
   flex-direction: column;
   align-items: center;
-  opacity: .7;
-  background: #FFCAD0;
+  background: #ffcad0;
   justify-content: space-between;
   border-radius: 10%;
   padding: 2%;
   width: 50%;
+  /* font-weight: 600; */
   max-width: 250px;
   margin-top: 15%;
   margin-left: -15%;
@@ -85,6 +97,5 @@ const PWording = styled.div`
   margin-left: 5%;
   align-items: center;
 `;
-
 
 export default Home;

@@ -23,6 +23,9 @@ const useStyles = makeStyles(theme => ({
   heroButtons: {
     marginTop: theme.spacing(4)
   },
+  grid: {
+    paddingBottom: 20
+  },
   cardGrid: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8)
@@ -30,10 +33,12 @@ const useStyles = makeStyles(theme => ({
   card: {
     height: "100%",
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    margin: 10
   },
   cardMedia: {
-    paddingTop: "56.25%" // 16:9
+    // paddingTop: "56.25%" // 16:9
+    paddingTop: "65%" // 16:9
   },
   cardContent: {
     flexGrow: 1
@@ -54,7 +59,7 @@ const useStyles = makeStyles(theme => ({
   // }
 }));
 
-const cards = [1, 2, 3, 4, 5, 6];
+// const cards = [1, 2, 3, 4, 5, 6];
 const Projects = () => {
   const classes = useStyles();
 
@@ -88,7 +93,12 @@ const Projects = () => {
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
-                  <Button variant="contained" color="primary" className={classes.mainButton}>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    className={classes.mainButton}
+                    href="https://github.com/jrizza88"
+                  >
                     GitHub Page
                   </Button>
                 </Grid>
@@ -104,39 +114,106 @@ const Projects = () => {
         <Container className={classes.cardGrid} maxWidth="lg">
           {/* End hero unit */}
           <Grid container spacing={6}>
-            {cards.map(card => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
-                <Card className={classes.card}>
-                  <CardMedia
-                    className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
-                    title="Image title"
-                  />
-                  <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Heading
-                    </Typography>
-                    <Typography>
-                      This is a media card. You can use this section to describe
-                      the content.
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      View
-                    </Button>
-                    <Button size="small" color="primary">
-                      Edit
-                    </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
+            {/* {cards.map(card => ( */}
+            {/* <Grid item key={card} xs={12} sm={6} md={4}> */}
+            <Grid xs={12} sm={6} md={4} className={classes.grid}>
+              <Card className={classes.card}>
+                <CardMedia
+                  className={classes.cardMedia}
+                  image={require("../../assets/HelloMelon.PNG")}
+                  title="Image title"
+                />
+                <CardContent className={classes.cardContent}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Hello Melon!
+                  </Typography>
+                  <Typography>Nutrition Tracking application</Typography>
+                </CardContent>
+                <CardActions>
+                  <Button
+                    size="small"
+                    color="primary"
+                    href="https://hello-melon-lambda.netlify.com/"
+                  >
+                    View
+                  </Button>
+                  <Button
+                    size="small"
+                    color="primary"
+                    href="https://github.com/labspt3-nutrition-tracker"
+                  >
+                    GitHub
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+
+            <Grid xs={12} sm={6} md={4} className={classes.grid}>
+              <Card className={classes.card}>
+                <CardMedia
+                  className={classes.cardMedia}
+                  image={require("../../assets/LambdaNotesJamar.PNG")}
+                  title="Image title"
+                />
+                <CardContent className={classes.cardContent}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Lambda Notes
+                  </Typography>
+                  <Typography>React.Js frontend based application</Typography>
+                </CardContent>
+                <CardActions>
+                  <Button
+                    size="small"
+                    color="primary"
+                    href="https://jamar-notes.netlify.com"
+                  >
+                    View
+                  </Button>
+                  <Button
+                    size="small"
+                    color="primary"
+                    href="https://github.com/jrizza88/front-end-project-week"
+                  >
+                    GitHub
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+
+            {/* <Grid xs={12} sm={6} md={4} className={classes.grid}>
+              <Card className={classes.card}>
+                <CardMedia
+                  className={classes.cardMedia}
+                  image="https://source.unsplash.com/random"
+                  title="Image title"
+                />
+                <CardContent className={classes.cardContent}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Heading
+                  </Typography>
+                  <Typography>
+                    This is a media card. You can use this section to describe
+                    the content.
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small" color="primary">
+                    View
+                  </Button>
+                  <Button size="small" color="primary">
+                    Edit
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid> */}
+            {/* ) */}
+            {/* )
+            } */}
           </Grid>
         </Container>
       </main>
       {/* Footer */}
-       {/*
+      {/*
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
           Footer
@@ -150,8 +227,8 @@ const Projects = () => {
           Something here to give the footer a purpose!
         </Typography>
         {/* <Copyright /> */}
-      {/* </footer> 
-      */}
+      {/* </footer>
+       */}
       {/* End footer */}
     </React.Fragment>
   );
