@@ -127,7 +127,8 @@ const Projects = () => {
                   <Typography gutterBottom variant="h5" component="h2">
                     Hello Melon!
                   </Typography>
-                  <Typography>Nutrition Tracking application</Typography>
+                  <Typography>Nutrition Tracking application for logging food entries with a coach feature for accountability.</Typography>
+                  <Typography>Built with React, GraphQl, MaterialUI, Styled Components, Sqlite3, Knex and more.</Typography>
                 </CardContent>
                 <CardActions>
                   <Button
@@ -160,6 +161,7 @@ const Projects = () => {
                     Lambda Notes
                   </Typography>
                   <Typography>React.Js frontend based application</Typography>
+                  <Typography>Built with React and Styled Components</Typography>
                 </CardContent>
                 <CardActions>
                   <Button
@@ -192,6 +194,7 @@ const Projects = () => {
                     User Interface Project
                   </Typography>
                   <Typography>Vanilla JS based client project</Typography>
+                  <Typography>Built with JavaScript and CSS LESS</Typography>
                 </CardContent>
                 <CardActions>
                   <Button
@@ -225,6 +228,7 @@ const Projects = () => {
                     Expat
                   </Typography>
                   <Typography>Backend database built with Node.Js</Typography>
+                  <Typography>Built with Node.js, Axios, Knex, Sqlite3, Postgres, Express, Jsonwebtoken and Bcrypt</Typography>
                 </CardContent>
                 <CardActions>
                   <Button
