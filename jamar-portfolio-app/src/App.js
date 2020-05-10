@@ -48,8 +48,6 @@ class App extends React.Component {
           <Route exact path="/About" component={About} />
           <Route exact path="/Projects" component={Projects} />
           <Route exact path="/Contact" component={Contact} />
-          {/* <Route exact path="/Resume" component={Resume} />
-          <Route exact path="/Posts" component={Posts} /> */}
           <Footer />
         </BodyContainer>
       </Container>

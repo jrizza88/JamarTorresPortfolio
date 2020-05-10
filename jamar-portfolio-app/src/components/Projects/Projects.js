@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -8,11 +9,15 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
 // import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 // import Link from "@material-ui/core/Link";
+import Dialog from "@material-ui/core/Dialog";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import List from "@material-ui/core/List";
 
-const useStyles = makeStyles(theme => ({
+const styles = theme => ({
   icon: {
     marginRight: theme.spacing(2)
   },
@@ -52,17 +57,33 @@ const useStyles = makeStyles(theme => ({
   },
   pageMargin: {
     marginBottom: "10%"
+  },
+  title: {
+    margin: theme.spacing(4, 0, 2),
   }
-  // footer: {
-  //   backgroundColor: theme.palette.background.paper,
-  //   padding: theme.spacing(6)
-  // }
-}));
+});
 
-// const cards = [1, 2, 3, 4, 5, 6];
-const Projects = () => {
-  const classes = useStyles();
+class Projects extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showModal: false
+      }
+    };
 
+    openModal = () => {
+      this.setState({
+        showModal: true
+      });
+    };
+
+
+  closeModal = () => {
+    this.setState({ showModal: false });
+  };
+  
+render(){
+  const { classes } = this.props;
   return (
     <React.Fragment>
       <CssBaseline />
@@ -92,7 +113,7 @@ const Projects = () => {
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
-                <Grid item>
+                {/* <Grid item> */}
                   <Button
                     variant="contained"
                     color="primary"
@@ -101,12 +122,7 @@ const Projects = () => {
                   >
                     GitHub Page
                   </Button>
-                </Grid>
-                {/* <Grid item>
-                  <Button variant="outlined" color="primary">
-                    Secondary action
-                  </Button>
-                </Grid> */}
+                {/* </Grid> */}
               </Grid>
             </div>
           </Container>
@@ -114,8 +130,6 @@ const Projects = () => {
         <Container className={classes.cardGrid} maxWidth="lg">
           {/* End hero unit */}
           <Grid container spacing={6}>
-            {/* {cards.map(card => ( */}
-            {/* <Grid item key={card} xs={12} sm={6} md={4}> */}
             <Grid xs={12} sm={6} md={4} className={classes.grid}>
               <Card className={classes.card}>
                 <CardMedia
@@ -145,11 +159,68 @@ const Projects = () => {
                   >
                     GitHub
                   </Button>
+                  <Dialog
+              open={this.state.showModal}
+              onClose={this.closeModal}
+              aria-labelledby="form-dialog-title"
+              PaperProps={{
+                style: {
+                  minWidth: "300px"
+                }
+              }}
+            >
+            <DialogContent classes={{ root: classes.dialogBox }} dividers>
+              <DialogContentText classes={{ root: classes.exer }}>
+        <div>
+        <div>Hello Melon Tech Stack</div>
+        <Grid container spacing={2}>
+        <Grid item xs={12} md={6}>
+          <Typography variant="h6" className={classes.title}>
+            Front End
+          </Typography>
+          <div className={classes.demo}>
+            <List>
+             <li>React.js</li>
+             <li>GraphQl</li>
+             <li>Material UI</li>
+             <li>Styled Components</li>
+            </List>
+          </div>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Typography variant="h6" className={classes.title}>
+            Icon with text
+          </Typography>
+          <div className={classes.demo}>
+            <List>
+              1
+              2
+              3
+            </List>
+          </div>
+      </Grid>
+    
+      </Grid>
+              </div>
+              </DialogContentText>
+              
+            </DialogContent>
+            </Dialog> 
+                  <Button
+                    size="small"
+                    color="primary"
+                    type="onSubmit"
+                    onClick={this.openModal}
+                  >
+                    Tech Stack
+                  </Button> 
+               
+                        
                 </CardActions>
               </Card>
             </Grid>
 
-            <Grid xs={12} sm={6} md={4} className={classes.grid}>
+            {/* <Grid xs={12} sm={6} md={4} className={classes.grid}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
@@ -160,7 +231,7 @@ const Projects = () => {
                   <Typography gutterBottom variant="h5" component="h2">
                     Lambda Notes
                   </Typography>
-                  <Typography>React.Js frontend based application</Typography>
+                  <Typography>A notes application to create, edit and delete notes from a database.</Typography>
                   <Typography>Built with React and Styled Components</Typography>
                 </CardContent>
                 <CardActions>
@@ -180,7 +251,7 @@ const Projects = () => {
                   </Button>
                 </CardActions>
               </Card>
-            </Grid>
+            </Grid> */}
 
             <Grid xs={12} sm={6} md={4} className={classes.grid}>
               <Card className={classes.card}>
@@ -193,7 +264,7 @@ const Projects = () => {
                   <Typography gutterBottom variant="h5" component="h2">
                     User Interface Project
                   </Typography>
-                  <Typography>Vanilla JS based client project</Typography>
+                  <Typography>User Interface project designed to reflect a client's request for a porfolio website.</Typography>
                   <Typography>Built with JavaScript and CSS LESS</Typography>
                 </CardContent>
                 <CardActions>
@@ -227,7 +298,7 @@ const Projects = () => {
                   <Typography gutterBottom variant="h5" component="h2">
                     Expat
                   </Typography>
-                  <Typography>Backend database built with Node.Js</Typography>
+                  <Typography>Backend database project to support the future front end application.</Typography>
                   <Typography>Built with Node.js, Axios, Knex, Sqlite3, Postgres, Express, Jsonwebtoken and Bcrypt</Typography>
                 </CardContent>
                 <CardActions>
@@ -241,58 +312,14 @@ const Projects = () => {
                 </CardActions>
               </Card>
             </Grid>
-
-            {/* <Grid xs={12} sm={6} md={4} className={classes.grid}>
-              <Card className={classes.card}>
-                <CardMedia
-                  className={classes.cardMedia}
-                  image="https://source.unsplash.com/random"
-                  title="Image title"
-                />
-                <CardContent className={classes.cardContent}>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Heading
-                  </Typography>
-                  <Typography>
-                    This is a media card. You can use this section to describe
-                    the content.
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    View
-                  </Button>
-                  <Button size="small" color="primary">
-                    Edit
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid> */}
-            {/* ) */}
-            {/* )
-            } */}
           </Grid>
         </Container>
       </main>
-      {/* Footer */}
-      {/*
-      <footer className={classes.footer}>
-        <Typography variant="h6" align="center" gutterBottom>
-          Footer
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="textSecondary"
-          component="p"
-        >
-          Something here to give the footer a purpose!
-        </Typography>
-        {/* <Copyright /> */}
-      {/* </footer>
-       */}
-      {/* End footer */}
     </React.Fragment>
   );
+  }
 };
-export default Projects;
+
+
+
+export default withStyles(styles)(Projects);
