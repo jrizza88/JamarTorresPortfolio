@@ -189,13 +189,14 @@ render(){
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography variant="h6" className={classes.title}>
-            Icon with text
+            Backend
           </Typography>
           <div className={classes.demo}>
             <List>
-              1
-              2
-              3
+             <li>Node.js</li>
+             <li>GraphQl</li>
+             <li>Sql</li>
+             <li>Knex</li>
             </List>
           </div>
       </Grid>
