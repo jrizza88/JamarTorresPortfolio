@@ -1,7 +1,7 @@
 [build]
 base = "jamar-portfolio-app/"
 publish = "jamar-portfolio-app/build/"
-command = "REACT_APP_STAGE=dev CI='' yarn build"
+command = "CI= yarn run build"
 
 [[redirects]]
 from ="/*"
