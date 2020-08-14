@@ -136,15 +136,18 @@ const Contact = () => {
           >
             Contact Me
           </Typography>
+          <div className={classes.contact}>
+            Get in touch with me. There's more than one way!
+            </div>
           <Typography
             variant="h5"
             align="center"
             color="textSecondary"
             paragraph
           >
-            <div className={classes.contact}>
+            {/* <div className={classes.contact}>
             Get in touch with me. There's more than one way!
-            </div>
+            </div> */}
           </Typography>
           <Grid container spacing={2} justify="center" className={classes.background}>
             <SocialDiv>
@@ -177,15 +180,18 @@ const Contact = () => {
             </SocialDiv>
           </Grid>
           <Grid container spacing={2} justify="center"  className={classes.cityDiv}>
+          <div className={classes.contact}>
+            Currently located in New York City
+            </div>
           <Typography
             variant="h5"
             align="center"
             color="textSecondary"
             paragraph
           >
-            <div className={classes.contact}>
+            {/* <div className={classes.contact}>
             Currently located in New York City
-            </div>
+            </div> */}
           </Typography>
           <CityContainer>
               <CityImg
