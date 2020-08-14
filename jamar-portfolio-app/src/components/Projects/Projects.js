@@ -130,7 +130,7 @@ render(){
         <Container className={classes.cardGrid} maxWidth="lg">
           {/* End hero unit */}
           <Grid container spacing={6}>
-            <Grid xs={12} sm={6} md={4} className={classes.grid}>
+            <Grid item xs={12} sm={6} md={4} className={classes.grid}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
@@ -187,7 +187,7 @@ render(){
             </List>
           </div>
         </Grid>
-        {/* <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6}>
           <Typography variant="h6" className={classes.title}>
             Backend
           </Typography>
@@ -199,7 +199,7 @@ render(){
              <li>Knex</li>
             </List>
           </div>
-      </Grid> */}
+      </Grid>
     
       </Grid>
               </div>
@@ -210,7 +210,7 @@ render(){
                   <Button
                     size="small"
                     color="primary"
-                    type="onSubmit"
+                    type="submit"
                     onClick={this.openModal}
                   >
                     Tech Stack
@@ -254,7 +254,7 @@ render(){
               </Card>
             </Grid> */}
 
-            <Grid xs={12} sm={6} md={4} className={classes.grid}>
+            <Grid item xs={12} sm={6} md={4} className={classes.grid}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
@@ -288,7 +288,7 @@ render(){
             </Grid>
 
 
-            <Grid xs={12} sm={6} md={4} className={classes.grid}>
+            <Grid item xs={12} sm={6} md={4} className={classes.grid}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
