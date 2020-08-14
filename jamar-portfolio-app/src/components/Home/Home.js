@@ -129,6 +129,7 @@ const AboutContainerMobile = styled.div`
   width: 75%;
   max-width: 250px;
   margin-right: 360px;
+  margin-top: 15%;
   // width: 50%;
   // max-width: 250px;
   // margin-top: 15%;
