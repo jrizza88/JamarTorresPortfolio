@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
@@ -134,7 +134,7 @@ render(){
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
-                  image={require("../../assets/HelloMelon.PNG")}
+                  image={require("../../assets/HelloMelon.png")}
                   title="Image title"
                 />
                 <CardContent className={classes.cardContent}>
