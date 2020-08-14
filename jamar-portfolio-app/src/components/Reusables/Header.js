@@ -1,8 +1,8 @@
 import React from "react";
-import Home from "../Home/Home";
-import About from "../About/About";
-import Projects from "../Projects/Projects";
-import Contact from "../Contact/Contact";
+// import Home from "../Home/Home";
+// import About from "../About/About";
+// import Projects from "../Projects/Projects";
+// import Contact from "../Contact/Contact";
 // import Resume from "../Resume/Resume";
 // import Posts from "../Posts/Posts";
 import { NavLink } from "react-router-dom";
@@ -98,12 +98,12 @@ const useStyles = makeStyles(theme => ({
             </IconButton> */}
             
                 <Typography variant="h6" className={classes.mainTitle}>
-                <NavLink to ="/" component={Home} className={classes.a} style={{ color: 'whiteSmoke' }}>Jamar Torres</NavLink>
+                <NavLink to ="/"  className={classes.a} style={{ color: 'whiteSmoke' }}>Jamar Torres</NavLink>
                 </Typography>
            
-            <NavLink to="/About" component={About} className={classes.a}><Button className={classes.title}>About</Button></NavLink>
-            <NavLink to="/Projects" component={Projects} className={classes.a}><Button color="inherit" className={classes.title}>Projects</Button></NavLink>
-            <NavLink to="/Contact" component={Contact} className={classes.a}><Button color="inherit" className={classes.title}>Contact</Button></NavLink>
+            <NavLink to="/About"  className={classes.a}><Button className={classes.title}>About</Button></NavLink>
+            <NavLink to="/Projects"  className={classes.a}><Button color="inherit" className={classes.title}>Projects</Button></NavLink>
+            <NavLink to="/Contact"  className={classes.a}><Button color="inherit" className={classes.title}>Contact</Button></NavLink>
             {/* <NavLink to="/Resume" component={Resume} className={classes.a}><Button color="inherit" className={classes.title}>Resume</Button></NavLink>
             <NavLink to="/Posts" component={Posts} className={classes.a}><Button color="inherit" className={classes.title}>Posts</Button></NavLink> */}
             {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
@@ -112,16 +112,16 @@ const useStyles = makeStyles(theme => ({
           </Toolbar>
           <Toolbar className={classes.toolbarMobile}>
           <Typography variant="h6" className={classes.mainTitle}>
-                  <NavLink to ="/" component={Home} className={classes.a} style={{ color: 'whiteSmoke' }}>Jamar Torres</NavLink>
+                  <NavLink to ="/" className={classes.a} style={{ color: 'whiteSmoke' }}>Jamar Torres</NavLink>
           </Typography>
           <IconButton className={classes.menuButton} edge="start"  color="inherit" aria-label="menu" onClick={toggleDrawer("right", true)}>
                     <MenuIcon />
           </IconButton>
             <Drawer open={state.right} onClose={toggleDrawer("right", false)}>
               <List className={classes.mobileMenu}>
-                <ListItem><NavLink to="/About" component={About} className={classes.a}><Button className={classes.titleMobile}>About</Button></NavLink></ListItem>
-                <ListItem><NavLink to="/Projects" component={Projects} className={classes.a}><Button color="inherit" className={classes.titleMobile}>Projects</Button></NavLink></ListItem>
-                <ListItem><NavLink to="/Contact" component={Contact} className={classes.a}><Button color="inherit" className={classes.titleMobile}>Contact</Button></NavLink></ListItem>
+                <ListItem><NavLink to="/About"  className={classes.a}><Button className={classes.titleMobile}>About</Button></NavLink></ListItem>
+                <ListItem><NavLink to="/Projects"  className={classes.a}><Button color="inherit" className={classes.titleMobile}>Projects</Button></NavLink></ListItem>
+                <ListItem><NavLink to="/Contact"  className={classes.a}><Button color="inherit" className={classes.titleMobile}>Contact</Button></NavLink></ListItem>
                 {/* <ListItem><NavLink to="/Resume" component={Resume} className={classes.a}><Button color="inherit" className={classes.titleMobile}>Resume</Button></NavLink></ListItem>
                 <ListItem><NavLink to="/Posts" component={Posts} className={classes.a}><Button color="inherit" className={classes.titleMobile}>Posts</Button></NavLink></ListItem> */}
               </List>
