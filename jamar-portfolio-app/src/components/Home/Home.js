@@ -71,6 +71,14 @@ const AboutContainer = styled.div`
   max-width: 250px;
   margin-top: 15%;
   margin-right: 125%;
+
+  @media (max-width:700px) {
+    width: 100%;
+    align-items: flex-start;
+    max-width: 200px;
+    margin-right: block;
+    // margin-left: 20%;
+  }
 `;
 
 const PWording = styled.div`
