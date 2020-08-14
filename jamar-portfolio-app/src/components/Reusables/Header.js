@@ -27,6 +27,7 @@ const useStyles = makeStyles(theme => ({
       background: "#102542",
       color: "#fff",
       textDecoration: "none",
+      cursor: 'click'
     },
     sideNav: {
       background: "orange"
@@ -53,6 +54,7 @@ const useStyles = makeStyles(theme => ({
       textDecoration: "none",
     },
     toolbar: {
+      flexWrap: 'wrap',
       [theme.breakpoints.down("xs")]: {
         display: "none"
       }
@@ -73,6 +75,7 @@ const useStyles = makeStyles(theme => ({
 
   const Header = () => {
     const classes = useStyles();
+    // const preventDefault = (event) => event.preventDefault();
     // const { classes } = props;
   
     const [state, setState] = React.useState({
@@ -98,10 +101,10 @@ const useStyles = makeStyles(theme => ({
             </IconButton> */}
             
                 <Typography variant="h6" className={classes.mainTitle}>
-                <NavLink to ="/"  className={classes.a} style={{ color: 'whiteSmoke' }}>Jamar Torres</NavLink>
+                <NavLink to="/" className={classes.a} style={{ color: 'whiteSmoke' }}>Jamar Torres</NavLink>
                 </Typography>
            
-            <NavLink to="/About"  className={classes.a}><Button className={classes.title}>About</Button></NavLink>
+            <NavLink to="/About" className={classes.a}><Button className={classes.title}>About</Button></NavLink>
             <NavLink to="/Projects"  className={classes.a}><Button color="inherit" className={classes.title}>Projects</Button></NavLink>
             <NavLink to="/Contact"  className={classes.a}><Button color="inherit" className={classes.title}>Contact</Button></NavLink>
             {/* <NavLink to="/Resume" component={Resume} className={classes.a}><Button color="inherit" className={classes.title}>Resume</Button></NavLink>
@@ -110,6 +113,8 @@ const useStyles = makeStyles(theme => ({
               <MenuIcon />
             </IconButton> */}
           </Toolbar>
+
+             {/* Mobile view! */}
           <Toolbar className={classes.toolbarMobile}>
           <Typography variant="h6" className={classes.mainTitle}>
                   <NavLink to ="/" className={classes.a} style={{ color: 'whiteSmoke' }}>Jamar Torres</NavLink>
@@ -120,10 +125,9 @@ const useStyles = makeStyles(theme => ({
             <Drawer open={state.right} onClose={toggleDrawer("right", false)}>
               <List className={classes.mobileMenu}>
                 <ListItem><NavLink to="/About"  className={classes.a}><Button className={classes.titleMobile}>About</Button></NavLink></ListItem>
-                <ListItem><NavLink to="/Projects"  className={classes.a}><Button color="inherit" className={classes.titleMobile}>Projects</Button></NavLink></ListItem>
+                <ListItem><NavLink to="/Projects"className={classes.a}><Button color="inherit" className={classes.titleMobile}>Projects</Button></NavLink></ListItem>
                 <ListItem><NavLink to="/Contact"  className={classes.a}><Button color="inherit" className={classes.titleMobile}>Contact</Button></NavLink></ListItem>
-                {/* <ListItem><NavLink to="/Resume" component={Resume} className={classes.a}><Button color="inherit" className={classes.titleMobile}>Resume</Button></NavLink></ListItem>
-                <ListItem><NavLink to="/Posts" component={Posts} className={classes.a}><Button color="inherit" className={classes.titleMobile}>Posts</Button></NavLink></ListItem> */}
+
               </List>
             </Drawer>
           </Toolbar>

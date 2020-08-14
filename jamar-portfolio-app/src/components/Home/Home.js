@@ -70,7 +70,7 @@ const AboutContainer = styled.div`
   /* font-weight: 600; */
   max-width: 250px;
   margin-top: 15%;
-  margin-right 120%;
+  margin-right: 125%;
 `;
 
 const PWording = styled.div`
