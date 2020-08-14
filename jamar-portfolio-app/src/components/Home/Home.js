@@ -108,11 +108,14 @@ const AboutContainerMobile = styled.div`
   justify-content: space-between;
   border-radius: 10%;
   padding: 2%;
-  width: 50%;
+  width: 75%;
   max-width: 250px;
-  margin-top: 15%;
-    max-width: 250px;
-    margin-right: 100%;
+  margin-right: 360px;
+  // width: 50%;
+  // max-width: 250px;
+  // margin-top: 15%;
+  //   max-width: 250px;
+  //   margin-right: 100%;
   }
 `;
 
