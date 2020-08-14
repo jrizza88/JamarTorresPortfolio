@@ -6,6 +6,24 @@ class Home extends React.Component {
   render() {
     return (
       <HomeBodyContainer>
+                    <AboutContainerMobile>
+              <PWording>
+                My name is Jamar, and I like to create and contribute to the
+                world of web development.
+              </PWording>
+              <Link
+                to="/About"
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  fontStyle: "italic",
+                  fontWeight: "bold",
+                  marginRight: "5%"
+                }}
+              >
+                Check me out!
+              </Link>
+            </AboutContainerMobile>
         <FeatureImg
           src={require("../../assets/JamarPortfolio.jpg")}
           alt="profilePhoto"
@@ -29,7 +47,7 @@ class Home extends React.Component {
                 Check me out!
               </Link>
             </AboutContainer>
-            <AboutContainerMobile>
+            {/* <AboutContainerMobile>
               <PWording>
                 My name is Jamar, and I like to create and contribute to the
                 world of web development.
@@ -46,7 +64,7 @@ class Home extends React.Component {
               >
                 Check me out!
               </Link>
-            </AboutContainerMobile>
+            </AboutContainerMobile> */}
           </HomeContainer>
       </HomeBodyContainer>
     );
