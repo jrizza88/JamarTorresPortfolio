@@ -1,8 +1,8 @@
 import React from "react";
-import Home from "../Home/Home";
-import About from "../About/About";
-import Projects from "../Projects/Projects";
-import Contact from "../Contact/Contact";
+// import Home from "../Home/Home";
+// import About from "../About/About";
+// import Projects from "../Projects/Projects";
+// import Contact from "../Contact/Contact";
 // import Resume from "../Resume/Resume";
 // import Posts from "../Posts/Posts";
 import { NavLink } from "react-router-dom";
@@ -117,7 +117,7 @@ const useStyles = makeStyles(theme => ({
              {/* Mobile view! */}
           <Toolbar className={classes.toolbarMobile}>
           <Typography variant="h6" className={classes.mainTitle}>
-                  <NavLink to ="/"  className={classes.a} style={{ color: 'whiteSmoke' }}>Jamar Torres</NavLink>
+                  <NavLink to ="/" className={classes.a} style={{ color: 'whiteSmoke' }}>Jamar Torres</NavLink>
           </Typography>
           <IconButton className={classes.menuButton} edge="start"  color="inherit" aria-label="menu" onClick={toggleDrawer("right", true)}>
                     <MenuIcon />
