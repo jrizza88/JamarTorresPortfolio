@@ -29,6 +29,24 @@ class Home extends React.Component {
                 Check me out!
               </Link>
             </AboutContainer>
+            <AboutContainerMobile>
+              <PWording>
+                My name is Jamar, and I like to create and contribute to the
+                world of web development.
+              </PWording>
+              <Link
+                to="/About"
+                style={{
+                  textDecoration: "none",
+                  color: "black",
+                  fontStyle: "italic",
+                  fontWeight: "bold",
+                  marginRight: "5%"
+                }}
+              >
+                Check me out!
+              </Link>
+            </AboutContainerMobile>
           </HomeContainer>
       </HomeBodyContainer>
     );
@@ -73,8 +91,26 @@ const AboutContainer = styled.div`
   margin-right: 125%;
 
   @media (max-width:700px) {
-    // width: 300px;
-    // align-items: flex-start;
+    display: none
+  }
+`;
+
+const AboutContainerMobile = styled.div`
+  display: none;
+
+  @media (max-width:700px) {
+  display: flex;
+  position: absolute;
+  opacity: 0.75;
+  flex-direction: column;
+  align-items: center;
+  background: #ffcad0;
+  justify-content: space-between;
+  border-radius: 10%;
+  padding: 2%;
+  width: 50%;
+  max-width: 250px;
+  margin-top: 15%;
     max-width: 250px;
     margin-right: 100%;
   }
