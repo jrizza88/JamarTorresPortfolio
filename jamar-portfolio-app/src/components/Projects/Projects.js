@@ -67,20 +67,29 @@ class Projects extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showModal: false
+      showModal: false,
+      showModal1: false
       }
     };
 
     openModal = () => {
       this.setState({
-        showModal: true
-      });
+        showModal: true});
     };
 
 
   closeModal = () => {
-    this.setState({ showModal: false });
+    this.setState({ showModal: false});
   };
+
+  openModal1 = () => {
+    this.setState({ showModal1: true});
+  };
+
+
+closeModal1 = () => {
+  this.setState({ showModal1: false });
+};
   
 render(){
   const { classes } = this.props;
@@ -130,7 +139,85 @@ render(){
         <Container className={classes.cardGrid} maxWidth="lg">
           {/* End hero unit */}
           <Grid container spacing={6}>
-            <Grid xs={12} sm={6} md={4} className={classes.grid}>
+
+             <Grid item xs={12} sm={6} md={4} className={classes.grid}>
+              <Card className={classes.card}>
+                <CardMedia
+                  className={classes.cardMedia}
+                  image={require("../../assets/projectBirthday.png")}
+                  title="Image title"
+                />
+                <CardContent className={classes.cardContent}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Project Birthday
+                  </Typography>
+                  <Typography>Information based application for social justice, VPN and Password Management awareness. </Typography>
+                  <Typography>Built with React, SCSS, and React Modal</Typography>
+                </CardContent>
+                <CardActions>
+                  <Button
+                    size="small"
+                    color="primary"
+                    href="https://projectbirthday.world/"
+                  >
+                    View
+                  </Button>
+                  <Button
+                    size="small"
+                    color="primary"
+                    href="https://github.com/jrizza88/ProjectBirthday/"
+                  >
+                    GitHub
+                  </Button>
+                  <Dialog
+              open={this.state.showModal}
+              onClose={this.closeModal}
+              aria-labelledby="form-dialog-title"
+              PaperProps={{
+                style: {
+                  minWidth: "300px"
+                }
+              }}
+            >
+      <DialogContent classes={{ root: classes.dialogBox }} dividers>
+              <DialogContentText classes={{ root: classes.exer }}>
+        <div>
+        <div>Project Birthday Tech Stack</div>
+        <Grid container spacing={2}>
+        <Grid item xs={12} md={6}>
+          <Typography variant="h6" className={classes.title}>
+            Front End
+          </Typography>
+          <div className={classes.demo}>
+            <List>
+             <li>React.js</li>
+             <li>Sass</li>
+             <li>Material UI</li>
+             <li>React Awesome Slider</li>
+            </List>
+          </div>
+        </Grid>
+      </Grid>
+              </div>
+              </DialogContentText>
+              
+            </DialogContent>
+            </Dialog> 
+                  <Button
+                    size="small"
+                    color="primary"
+                    type="submit"
+                    onClick={this.openModal}
+                  >
+                    Tech Stack
+                  </Button> 
+               
+                        
+                </CardActions>
+              </Card>
+            </Grid>
+
+            <Grid item xs={12} sm={6} md={4} className={classes.grid}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
@@ -160,8 +247,8 @@ render(){
                     GitHub
                   </Button>
                   <Dialog
-              open={this.state.showModal}
-              onClose={this.closeModal}
+              open={this.state.showModal1}
+              onClose={this.closeModal1}
               aria-labelledby="form-dialog-title"
               PaperProps={{
                 style: {
@@ -189,13 +276,14 @@ render(){
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography variant="h6" className={classes.title}>
-            Icon with text
+            Backend
           </Typography>
           <div className={classes.demo}>
             <List>
-              1
-              2
-              3
+             <li>Node.js</li>
+             <li>GraphQl</li>
+             <li>Sql</li>
+             <li>Knex</li>
             </List>
           </div>
       </Grid>
@@ -209,8 +297,8 @@ render(){
                   <Button
                     size="small"
                     color="primary"
-                    type="onSubmit"
-                    onClick={this.openModal}
+                    type="submit"
+                    onClick={this.openModal1}
                   >
                     Tech Stack
                   </Button> 
@@ -220,40 +308,9 @@ render(){
               </Card>
             </Grid>
 
-            {/* <Grid xs={12} sm={6} md={4} className={classes.grid}>
-              <Card className={classes.card}>
-                <CardMedia
-                  className={classes.cardMedia}
-                  image={require("../../assets/LambdaNotesJamar.PNG")}
-                  title="Image title"
-                />
-                <CardContent className={classes.cardContent}>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Lambda Notes
-                  </Typography>
-                  <Typography>A notes application to create, edit and delete notes from a database.</Typography>
-                  <Typography>Built with React and Styled Components</Typography>
-                </CardContent>
-                <CardActions>
-                  <Button
-                    size="small"
-                    color="primary"
-                    href="https://jamar-notes.netlify.com"
-                  >
-                    View
-                  </Button>
-                  <Button
-                    size="small"
-                    color="primary"
-                    href="https://github.com/jrizza88/front-end-project-week"
-                  >
-                    GitHub
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid> */}
+   
 
-            <Grid xs={12} sm={6} md={4} className={classes.grid}>
+            <Grid item xs={12} sm={6} md={4} className={classes.grid}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
@@ -287,7 +344,7 @@ render(){
             </Grid>
 
 
-            <Grid xs={12} sm={6} md={4} className={classes.grid}>
+            <Grid item xs={12} sm={6} md={4} className={classes.grid}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}
@@ -323,3 +380,8 @@ render(){
 
 
 export default withStyles(styles)(Projects);
+
+
+
+
+
