@@ -43,7 +43,7 @@ class App extends React.Component {
     return (
       <Container>
         <BodyContainer>
-        <Header />
+          <Header />
           <Route exact path="/" component={Home} />
           <Route exact path="/About" component={About} />
           <Route exact path="/Projects" component={Projects} />
@@ -66,7 +66,7 @@ const Container = styled.section`
   overflow-x:hidden;
   background: #F8F9F9;
   // background: #f2e7d9  
-`; // antiquewhite^
+`; 
 
 const BodyContainer = styled.section`
   display: flex;
@@ -75,19 +75,5 @@ const BodyContainer = styled.section`
   width: 100%;
   overflow-x:hidden;
 `;
-
-// const Headline = styled.div`
-//   display: flex;
-//   position: relative;
-//   /* padding-left: 0.5%; */
-//   padding: 1% 2% 1% 2%;
-//   font-size: 2.3rem;
-//   justify-content: space-between;
-//   border: solid green 1px;
-// `;
-
-// const HeaderDiv = styled.div`
-//   display: flex;
-// `;
 
 export default withRouter(App);

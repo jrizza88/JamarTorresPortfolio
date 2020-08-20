@@ -3,8 +3,6 @@ import styled from "styled-components";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
-// import Button from "@material-ui/core/Button";
-// import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles(theme => ({
@@ -69,9 +67,8 @@ const About = () => {
               Jamar is a passionate web developer with a strong interest in
               product management. He enjoys creating interactive and intuitive
               experiences. He believes having a strong front-end is central to
-              any and every idea and product. He's most excited about creating
-              and seeing a project through and looks forward to putting his
-              vision (or yours!) into meaningful web applications. Resilience is
+              any idea and product. He is most excited to create and see a project through. 
+              He looks forward into help you create meaningful web applications. Resilience is
               key to Jamar, and he never gives up until he solves a problem.
               Whether this is through web development or life in general, he is
               always willing to take on different approaches.
@@ -85,10 +82,10 @@ const About = () => {
               India, spent time in the education field in Turkey, completed a
               dialogue program geared toward diplomacy and has worked for a
               student exchange program. Jamar currently works at the United
-              Nations and is currently attending a 30 week immersive web
+              Nations and recently completed an immersive web
               development and computer science program at Lambda School.
-              Currently, Jamar is looking to transition into the world of web
-              development to jumpstart his next career endeavor.
+              Currently, Jamar is looking to transition into the world of software
+              to jumpstart his career transition.
             </AboutDivs>
           </AboutMiniContainer>
         </AboutContainer>

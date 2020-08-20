@@ -6,7 +6,7 @@ class Home extends React.Component {
   render() {
     return (
       <HomeBodyContainer>
-                    <AboutContainerMobile>
+          <AboutContainerMobile>
               <PWording>
                 My name is Jamar, and I like to create and contribute to the
                 world of web development.
@@ -23,7 +23,7 @@ class Home extends React.Component {
               >
                 Check me out!
               </Link>
-            </AboutContainerMobile>
+          </AboutContainerMobile>
         <FeatureImg
           src={require("../../assets/JamarPortfolio.jpg")}
           alt="profilePhoto"
@@ -47,24 +47,6 @@ class Home extends React.Component {
                 Check me out!
               </Link>
             </AboutContainer>
-            {/* <AboutContainerMobile>
-              <PWording>
-                My name is Jamar, and I like to create and contribute to the
-                world of web development.
-              </PWording>
-              <Link
-                to="/About"
-                style={{
-                  textDecoration: "none",
-                  color: "black",
-                  fontStyle: "italic",
-                  fontWeight: "bold",
-                  marginRight: "5%"
-                }}
-              >
-                Check me out!
-              </Link>
-            </AboutContainerMobile> */}
           </HomeContainer>
       </HomeBodyContainer>
     );
@@ -103,7 +85,6 @@ const AboutContainer = styled.div`
   border-radius: 10%;
   padding: 2%;
   width: 50%;
-  /* font-weight: 600; */
   max-width: 250px;
   margin-top: 15%;
   margin-right: 125%;
@@ -115,7 +96,6 @@ const AboutContainer = styled.div`
 
 const AboutContainerMobile = styled.div`
   display: none;
-
   @media (max-width:700px) {
   display: flex;
   position: absolute;
@@ -130,11 +110,6 @@ const AboutContainerMobile = styled.div`
   max-width: 250px;
   margin-right: 360px;
   margin-top: 15%;
-  // width: 50%;
-  // max-width: 250px;
-  // margin-top: 15%;
-  //   max-width: 250px;
-  //   margin-right: 100%;
   }
 `;
 
